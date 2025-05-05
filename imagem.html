@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem</title>
+</head>
+<p>
+    Trocar o Kevin Hart
+</p>
+    <img onmouseover="mudar()" id="img1" src="serio.jpg" alt="imagem1" height="300px" width="300px">
+    <img onmouseout="voltar()" id="img2" src="sorrindo.jpg" alt="imagem2" height="300px" width="300px">
+<body>
+    <script>
+        function mudar(){
+            var img1 = document.getElementById('img1');
+            var img2 = document.getElementById('img2');
+            img1.style.display = 'none';
+            img2.style.display = 'block';
+        }
+        function voltar(){
+            var img1 = document.getElementById('img1');
+            var img2 = document.getElementById('img2');
+            img1.style.display = 'block';
+            img2.style.display = 'none';
+        }
+    </script>
+    
+</body>
+</html>

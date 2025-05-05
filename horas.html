@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>horas</title>
+</head>
+<body>
+    <input type="number" id="horas" placeholder="Digite seu horario">
+    <button onclick="horas()">
+        clique
+    </button>
+    
+    <p id="resultado"></p>
+    
+    <script>
+        var dia = ''
+        function horas(){
+            var horario = document.getElementById('horas');
+            var numero = Number.parseInt(horario.value);
+            var res = document.getElementById("resultado");
+   
+            if(numero >= 6 && numero <= 12){
+                document.body.style.backgroundImage="url('./manha.jpg')"
+                document.body.style.backgroundSize="100%"
+                dia = 'Bom dia!'
+            }
+            else if(numero >= 13 && numero <= 18){
+                document.body.style.backgroundImage="url('./tarde.webp')"
+                document.body.style.backgroundSize="100%"
+                dia = 'Boa tarde!'
+            }
+            else if(numero >= 19 && numero <= 23){
+                document.body.style.backgroundImage="url('./noite.jpg')"
+                document.body.style.backgroundSize="100%"
+                dia = 'Boa noite!'
+            }
+            else if(numero >= 1 && numero <= 5){
+                document.body.style.backgroundImage="url('./madrugada.jpg')"
+                document.body.style.backgroundSize="100%"
+                dia = 'Boa madrugada!'
+            }
+            res.innerHTML = dia
+            
+        }   
+    </script>
+</body>
+</html>
